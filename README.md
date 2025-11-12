@@ -26,3 +26,8 @@ Kode tersebut membuat stream baru yang tiap detik menghasilkan nilai berupa warn
 ### Soal 4
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 ![p1_s4.gif](asset/praktikum1/p1_s4.gif)
+
+### Soal 5
+- Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
+    - await for bertipe sinkron dan streamnya terbatas.
+    - listen() bertipe asinkron dan streamnya berjalan terus (infinite).
