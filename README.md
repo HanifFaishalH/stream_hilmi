@@ -6,12 +6,12 @@ Absen 15
 
 ## Praktikum 4: Subscribe ke stream events
 
-### Soal 8
+### Soal 9
 
-- Jelaskan maksud kode langkah 1-3 tersebut!
-    - langkah 1: menambahkan variabel StreamTransformer
-    - langkah 2: menambahkan StreamTransformer ke initState. Setiap angka yang masuk ke stream, akan dikali 10. Jika stream menerima error, transformer akan mengganti error dengan -1, Jika stream selesai, listener tidak menerima event lagi.
-    - langkah 3: jika tombol ditekan, akan menghasilkan angka random. method addNumberToSink() akan mengirimkan angka ke stream. Transformer akan mengalikan angka dengan 10. Listener menerima event yang telah dihitung dan setState() akan menampilkan angka tersebut di UI.
+- Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+    - langkah 2: pembuatan StreamSubscription untuk listener. jadi, setiap ada angka baru yang masuk ke stream, fungsi ini dipanggil. Lalu, UI diupdate dengan angka terbaru.
+    - langkah 6: subscription.cancel() dibuat untuk menghapus listener, sehingga tidak ada memory leak dan event masuk setelah widget hilang.
+    - langkah 8: fungsi untuk membuat angka random. Lalu, jika stream dibuka, angka tetap bisa diubah. Jika stream ditutup, akan muncul pesan error berupa nilai -1.
+
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-
-![p3_s7.gif](asset/praktikum3/p3_s7.gif)
+![p4_s9.gif](asset/praktikum4/p4_s9.gif)
