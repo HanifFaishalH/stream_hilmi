@@ -4,30 +4,16 @@ Absen 15
 
 # Jobsheet 12: Streams
 
-## Praktikum 1: Dart Streams
+## Praktikum 2: Stream controllers dan sinks
 
-### Soal 1
+### Soal 6
 
-- Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan Anda.
-- Gantilah warna tema aplikasi sesuai kesukaan Anda.
+- Jelaskan maksud kode langkah 8 dan 10 tersebut!
 
-![p1_s1.png](asset/praktikum1/p1_s1.png)
+    - langkah 8 adalah kode untuk menghubungkan NumberStream ke UI. Ketika ada perubahan data dari stream, UI akan langsung update.
 
-### Soal 2
-- Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel colors tersebut.
-![p1_s2.png](asset/praktikum1/p1_s2.png)
+    - langkah 10 adalah fungsi untuk mengirim angka random ke stream setiap button ditekan.
 
-### Soal 3
-- Jelaskan fungsi keyword yield* pada kode tersebut!
-yield* digujnakan untuk mengalirkan semua nilai dari stream lain ke stream file main.
-- Apa maksud isi perintah kode tersebut?
-Kode tersebut membuat stream baru yang tiap detik menghasilkan nilai berupa warna ke stream yang memanggil.
-
-### Soal 4
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-![p1_s4.gif](asset/praktikum1/p1_s4.gif)
 
-### Soal 5
-- Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
-    - await for bertipe sinkron dan streamnya terbatas.
-    - listen() bertipe asinkron dan streamnya berjalan terus (infinite).
+![p2_s6.gif](asset/praktikum2/p2_s6.gif)
