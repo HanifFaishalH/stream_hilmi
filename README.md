@@ -4,7 +4,7 @@ Absen 15
 
 # Jobsheet 12: Streams
 
-## Praktikum 4: Subscribe ke stream events
+## Praktikum 3: Injeksi data ke streams
 
 ### Soal 8
 
