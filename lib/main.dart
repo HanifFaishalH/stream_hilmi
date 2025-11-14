@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stream_hilmi/random_screen.dart';
 import 'package:stream_hilmi/stream.dart';
 import 'dart:async';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.deepPurple,
       ),
-      home: const StreamHomePage(),
+      home: const RandomScreen(),
     );
   }
 }
