@@ -4,14 +4,18 @@ Absen 15
 
 # Jobsheet 12: Streams
 
-## Praktikum 4: Subscribe ke stream events
+## Praktikum  5: Multiple stream subscriptions
 
-### Soal 9
+### Soal 10
 
-- Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
-    - langkah 2: pembuatan StreamSubscription untuk listener. jadi, setiap ada angka baru yang masuk ke stream, fungsi ini dipanggil. Lalu, UI diupdate dengan angka terbaru.
-    - langkah 6: subscription.cancel() dibuat untuk menghapus listener, sehingga tidak ada memory leak dan event masuk setelah widget hilang.
-    - langkah 8: fungsi untuk membuat angka random. Lalu, jika stream dibuka, angka tetap bisa diubah. Jika stream ditutup, akan muncul pesan error berupa nilai -1.
+- Jelaskan mengapa error itu bisa terjadi ?
+
+Error bisa terjadi karena numberStreamController.stream sedang dipakai lebih dari satu listener. Stream default adalah single subsciption, sehingga hanya boleh punya 1 listener.
+
+### Soal 11
+
+- Jelaskan mengapa hal itu bisa terjadi ?
+Karena, streamnya diubah menjadi BroadcastStream. Karena telah diubah, stream bisa punya banyak listener sehingga stream tidak error ketika dilisten ulang.
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-![p4_s9.gif](asset/praktikum4/p4_s9.gif)
+![p5_s10.gif](asset/praktikum5/p5_s10.gif)

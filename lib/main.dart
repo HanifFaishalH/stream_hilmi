@@ -45,6 +45,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
   // praktikum 4
   late StreamSubscription subscription;
 
+  // praktikum 5
+  late StreamSubscription subscription2;
+  String values =  '';
+
   void changeColor() async {
     // await for (var eventColor in colorStream.getColors()) {
     //   setState(() {
@@ -69,9 +73,9 @@ class _StreamHomePageState extends State<StreamHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(lastNumber.toString()),
+            Text(values),
             ElevatedButton(
-                onPressed: () => addRandomNumber(), 
+                onPressed: () => addRandomNumber(),
                 child: Text('Start Random Number')),
             ElevatedButton(
               onPressed: () => stopStream(),
@@ -87,7 +91,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
   void initState() {
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
-    Stream stream = numberStreamController.stream;
+    Stream stream = numberStreamController.stream.asBroadcastStream();
     // stream.listen((event) {
     //   setState(() {
     //     lastNumber = event;
@@ -120,13 +124,13 @@ class _StreamHomePageState extends State<StreamHomePage> {
 
     subscription = stream.listen((event) {
       setState(() {
-        lastNumber = event;
+        values += '$event - ';
       });
     });
 
-    subscription.onError((error) {
+    subscription.onError((event) {
       setState(() {
-        lastNumber = -1;
+        values += '$event - ';
       });
     });
 
@@ -143,7 +147,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
     subscription.cancel();
     super.dispose();
   }
-  
+
   void addRandomNumber() {
     Random random = Random();
     int myNum = random.nextInt(10);
