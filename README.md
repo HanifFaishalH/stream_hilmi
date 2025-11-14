@@ -4,18 +4,14 @@ Absen 15
 
 # Jobsheet 12: Streams
 
-## Praktikum  5: Multiple stream subscriptions
+## Praktikum  6: StreamBuilder
 
-### Soal 10
+### Soal 12
 
-- Jelaskan mengapa error itu bisa terjadi ?
-
-Error bisa terjadi karena numberStreamController.stream sedang dipakai lebih dari satu listener. Stream default adalah single subsciption, sehingga hanya boleh punya 1 listener.
-
-### Soal 11
-
-- Jelaskan mengapa hal itu bisa terjadi ?
-Karena, streamnya diubah menjadi BroadcastStream. Karena telah diubah, stream bisa punya banyak listener sehingga stream tidak error ketika dilisten ulang.
+- Jelaskan maksud kode pada langkah 3 dan 7 !
+  - langkah 3 : Class NumberStream adalah class Stream untuk membuat angka random.
+  - langkah 7 : StreamBuilder adalah widget yang menghubungkan stream ke UI Flutter secara otomatis. StreamBuilder menerima stream dari NumberStream, lalu membuat UI baru setiap ada data baru dengan snapshot, sehingga tidak perlu state manual.
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-![p5_s10.gif](asset/praktikum5/p5_s10.gif)
+
+![p6_s12.gif](asset/praktikum6/p6_s12.gif)
